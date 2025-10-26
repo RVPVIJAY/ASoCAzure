@@ -1,0 +1,10 @@
+- task: HCLAppScanOnCloud@2
+  inputs:
+    AppSecTestService: 'ASoCConnect'
+    applications: 'bc39ab99-5c56-4548-b3ed-4f11efc1cba0'
+    scanname: 'RVPTest'
+    scantype: 'dynamic'
+    dynamicType: 'DAST'
+    scanURL: 'https://demo.testfire.net'
+    network: 'public'
+    intervention: false
