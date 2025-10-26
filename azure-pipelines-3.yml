@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+
+  - task: HCLAppScanOnCloud@2
+    inputs:
+      AppSecTestService: 'ASoCConnect'
+      applications: 'dd090c4b-ca8a-4718-8122-2ed4661536f5'
+      scanname: 'Testy'
+      scantype: 'dynamic'
+      dynamicType: 'DAST'
+      network: 'public'
