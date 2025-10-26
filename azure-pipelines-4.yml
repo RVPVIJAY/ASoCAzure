@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  name: 'MyWindowsAgentPool'   # Use the pool where your self-hosted agent is registered
+  name: 'Mymachine'   # Use the pool where your self-hosted agent is registered
 
 steps:
 - task: HCLAppScanOnCloud@2
